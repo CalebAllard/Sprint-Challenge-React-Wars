@@ -7,8 +7,8 @@ import styled from 'styled-components';
 const CardsGroup = styled.div`
     display:flex;
     flex-wrap:wrap;
-    justify-content: space-around;
-    align-content:space-around;
+    justify-content: space-between;
+    align-content: space-between;
 `;
 
 export default function CardGroup(){
@@ -22,21 +22,13 @@ export default function CardGroup(){
         axios.get('https://cors-anywhere.herokuapp.com/https://lambda-swapi.herokuapp.com/api/people/')
         .then(response => {
             // console.log(response);
-             return setPeople(response.data.results);
-            // console.log(people);
-        // for (let key in people.results){
-        //     if (people.results.hasOwnProperty(key)){
-        //         tempArray.push(people.results[key]);
-        //     } 
-        // }
-        // return tempArray; 
-            
+            setPeople(response.data.results);
+           
         
          })
          .catch(error =>{console.log(`error: ${error}`)});
      },[]);
-        // console.log(tempArray);
-        // let tempArray = {}
+        
         for (let key in people){
             if (people.hasOwnProperty(key)){
                 tempArray.push(people[key]);
