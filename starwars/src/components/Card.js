@@ -9,11 +9,15 @@ const StyledCard = style.div`
     div h3{
         text-transform:uppercase;
         font-size:1.8rem;
+        padding: 1rem 0;
     }
     div{
         width:100%;
         background:lightblue;
         
+    }
+    p{
+        padding: 1rem 0;
     }
 
 `;
